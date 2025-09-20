@@ -1,5 +1,6 @@
 const box = document.querySelector(".container");
 const sizeBtn = document.querySelector("#btn");
+const sizeText = document.querySelector("#sizeText");
 let boxSize = 16;
 let divs;
 
@@ -15,6 +16,7 @@ sizeBtn.addEventListener("click", () => {
 
 function displayBox()
 {
+    sizeText.textContent = `${boxSize} x ${boxSize}`;
     for(let i = 1; i <= (boxSize*boxSize);i++)
     {
         const div = document.createElement("div");
