@@ -42,7 +42,7 @@ function displayBox()
     for(let i = 1; i <= (boxSize*boxSize);i++)
     {
         const div = document.createElement("div");
-        div.style.width = `${565/boxSize}px`;
+        div.style.width = `${540/boxSize}px`;
         div.style.height = "auto";
         div.id = "box";
         div.addEventListener("mousemove", hoverBox);
