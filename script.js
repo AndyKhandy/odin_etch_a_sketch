@@ -24,7 +24,10 @@ clearBtn.addEventListener("click", () => {
     displayBox();
 });
 
-deactiveBtn.addEventListener("click", () => colorActive = !colorActive);
+deactiveBtn.addEventListener("click", () => {
+    colorActive = !colorActive;
+    deactiveBtn.classList.toggle("active");
+});
 
 function displayBox()
 {
@@ -37,6 +40,11 @@ function displayBox()
         div.id = "box";
         div.addEventListener("mousemove", hoverBox);
         box.appendChild(div);
+    }
+    if(!colorActive)
+    {
+        deactiveBtn.classList.toggle("active");
+        colorActive = !colorActive;
     }
     divs = document.querySelectorAll("#box");
 }
@@ -54,7 +62,7 @@ function hoverBox(div)
         this.style.backgroundColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`
     }
         else{
-         this.style.backgroundColor = "red";
+         this.style.backgroundColor = "black";
         }
     }
 }
