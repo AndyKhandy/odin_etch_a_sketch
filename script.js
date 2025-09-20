@@ -1,6 +1,7 @@
 const box = document.querySelector(".container");
 const sizeBtn = document.querySelector("#btn");
 let boxSize = 16;
+let divs;
 
 let rainbow = false;
 
@@ -23,6 +24,7 @@ function displayBox()
         div.addEventListener("mousemove", hoverBox);
         box.appendChild(div);
     }
+    divs = document.querySelectorAll("#box");
 }
 
 
@@ -42,7 +44,6 @@ function hoverBox(div)
 
 function clearBox()
 {
-    let divs = document.querySelectorAll("#box");
     for(const div of divs)
     {
         div.remove();
