@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     gap: 15px;
     align-items: center;
+    font-family:'Courier New', Courier, monospace;
 }
 
 h1 {
@@ -42,8 +43,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    width: 750px;
+    gap: 20px;
+    width: 800px;
 }
 
 button {
@@ -52,8 +53,26 @@ button {
     border: 2px solid rgb(13, 132, 146);
     font-weight: bold;
     width: 170px;
+    transition: 200ms ease;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.active {
+
+.addOns button {
+    width: 70px
+}
+
+button:hover{
+    transform: translateY(3px);
+}
+
+.activeD {
     background-color: rgba(167, 25, 72, 0.352);
+}
+
+.activeR {
+    background-image: linear-gradient(to right, rgb(177, 78, 78), orange, yellow, rgb(92, 169, 92), rgb(141, 141, 219), rgb(163, 102, 163));
+    color: white;
+    font-weight: bolder;
+    color: rgb(3, 1, 1);
 }

@@ -3,7 +3,8 @@ const box = document.querySelector(".container");
 const sizeBtn = document.querySelector("#btnChange");
 const clearBtn = document.querySelector("#btnClear");
 const sizeText = document.querySelector("#sizeText");
-const deactiveBtn = document.querySelector("#btnDeactivate")
+const deactiveBtn = document.querySelector("#btnDeactivate");
+const rainbowBtn = document.querySelector("#btnRainbow");
 
 let boxSize = 16;
 let divs;
@@ -26,8 +27,14 @@ clearBtn.addEventListener("click", () => {
 
 deactiveBtn.addEventListener("click", () => {
     colorActive = !colorActive;
-    deactiveBtn.classList.toggle("active");
+    deactiveBtn.classList.toggle("activeD");
 });
+
+rainbowBtn.addEventListener("click", () => {
+    rainbowBtn.classList.toggle("activeR");
+    rainbow = !rainbow;
+});
+
 
 function displayBox()
 {
@@ -43,8 +50,13 @@ function displayBox()
     }
     if(!colorActive)
     {
-        deactiveBtn.classList.toggle("active");
+        deactiveBtn.classList.toggle("activeD");
         colorActive = !colorActive;
+    }
+    if(rainbow)
+    {
+        rainbowBtn.classList.toggle("activeR");
+        rainbow = !rainbow;
     }
     divs = document.querySelectorAll("#box");
 }
